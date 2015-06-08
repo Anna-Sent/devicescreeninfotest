@@ -18,10 +18,13 @@ public class MainActivity extends Activity {
 		StringBuilder sb = new StringBuilder();
 		Point sizeInDp = DisplayUtils.getScreenSizeInDpWrapped(this);
 		Point sizeInPx = DisplayUtils.getScreenSizeInPx(this);
+		double diagonalInInches = DisplayUtils.getScreenDiagonalInInches(this);
 		sb.append("Width in dp = ").append(sizeInDp.x).append("\n");
 		sb.append("Height in dp = ").append(sizeInDp.y).append("\n");
 		sb.append("Width in px = ").append(sizeInPx.x).append("\n");
 		sb.append("Height in px = ").append(sizeInPx.y).append("\n");
+		sb.append(String.format("Diagonal in inches = %.2f", diagonalInInches))
+				.append("\n");
 
 		TextView tv = (TextView) findViewById(R.id.textView);
 		tv.setText(sb.toString());
