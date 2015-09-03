@@ -25,6 +25,9 @@ public class MainActivity extends Activity {
 		sb.append("Height in px = ").append(sizeInPx.y).append("\n");
 		sb.append(String.format("Diagonal in inches = %.2f", diagonalInInches))
 				.append("\n");
+		sb.append("Density = ")
+				.append(DisplayUtils.getDisplayMetrics(this).density)
+				.append("\n");
 
 		TextView tv = (TextView) findViewById(R.id.textView);
 		tv.setText(sb.toString());
